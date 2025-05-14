@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <!-- Contenedor de textos -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2025-05-14"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCondicion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soleado"
+                android:textColor="#333" />
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mín: 18°C / Máx: 27°C"
+                android:textColor="#555" />
+        </LinearLayout>
+
+        <!-- Imagen del clima -->
+        <ImageView
+            android:id="@+id/ivClima"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_forecast"
+            android:contentDescription="Icono clima" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

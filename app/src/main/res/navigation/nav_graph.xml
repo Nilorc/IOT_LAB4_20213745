@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/locationFragment">
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.teleweather.fragments.LocationFragment"
+        android:label="Locations"
+        tools:layout="@layout/fragment_location">
+
+        <action
+            android:id="@+id/action_locationFragment_to_forecasterFragment"
+            app:destination="@id/forecasterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forecasterFragment"
+        android:name="com.example.teleweather.fragments.ForecasterFragment"
+        android:label="Pronóstico"
+        tools:layout="@layout/fragment_forecaster" />
+
+    <fragment
+        android:id="@+id/futureFragment"
+        android:name="com.example.teleweather.fragments.FutureFragment"
+        android:label="Futuro"
+        tools:layout="@layout/fragment_future" />
+
+</navigation>
